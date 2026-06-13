@@ -1,6 +1,23 @@
-// this is your custom Javascript file
+$(document).ready(function() {
 
-$(function () {
-  // add any custom Javascript code below this line
-  // add any custom Javascript code above this line.
-})
+    $("#insight-button").click(function() {
+        $("#insight-text").text(
+            "Basketball was invented by Dr. James Naismith in 1891."
+        );
+    });
+
+    $("#basketball-image").mouseover(function() {
+        $(this).attr("src", "images/basketball2.jpg");
+    });
+
+    $("#basketball-image").mouseout(function() {
+        $(this).attr("src", "images/basketball1.jpg");
+    });
+
+    $("#move-button").click(function() {
+        $("#basketball-card").animate({
+            marginLeft: "150px"
+        }, 800);
+    });
+
+});
